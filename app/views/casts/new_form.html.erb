@@ -1,0 +1,26 @@
+<h1>Add A New <%= @role %></h1>
+
+<form action="http://localhost:3000/create_<%= @role %>" id="drctr">
+  <div>
+    <label for="<%= @role %>_name">Name:</label>
+    <input id="<%= @role %>_name" type="text" name="cast_name">
+  </div>
+  <div>
+    <label for="<%= @role %>_image_url">Image URL:</label>
+    <input id="<%= @role %>_image_url" type="text" name="cast_picture">
+  </div>
+  <div>
+    <label for="<%= @role %>_dob">Date of Birth:</label>
+    <input id="<%= @role %>_dob" type="text" name="cast_dob">
+  </div>
+  <div>
+    <label for="<%= @role %>_bio">Bio:</label>
+    <!--<input id="<%= @role %>_bio" type="text" name="<%= @role %>_bio">-->
+    <textarea name="cast_bio" cols="10" rows="5" form="drctr" ></textarea>
+  </div>
+  <div>
+    <button>Create <%= @role %></button>
+  </div>
+</form>
+
+

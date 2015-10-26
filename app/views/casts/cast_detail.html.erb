@@ -1,0 +1,16 @@
+<h1><%= @cast.role.capitalize %> Details</h1>
+
+<!-- Image -->
+<img src="<%= @cast.image_url %>" width="300">
+
+<!-- Name  -->
+<p><%= @cast.name %></p>
+<!-- D.O.B.-->
+<p><%= @cast.dob %></p>
+<!-- Bio   -->
+<p><%= @cast.bio %></p>
+
+<!-- Nav -->
+<a href="http://localhost:3000/<%= @cast.role %>s">Back</a>
+<a href="http://localhost:3000/<%= @cast.role %>s/<%= @cast.id %>/edit">Edit</a>
+<a href="http://localhost:3000/delete_<%= @cast.role %>/<%= @cast.id %>">Delete</a>

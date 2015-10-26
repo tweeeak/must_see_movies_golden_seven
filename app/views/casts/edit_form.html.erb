@@ -1,0 +1,26 @@
+<h1>Edit director info</h1>
+<h1><%= @cast.role %></h1>
+<form action="http://localhost:3000/update_<%= @cast.role %>/<%=@cast.id%>" id="drctr">
+  <div>
+    <label for="<%= @cast.role %>_name">Name:</label>
+    <input id="<%= @cast.role %>_name" type="text" name="cast_name" value= <%=@cast.name%>>
+  </div>
+  <div>
+    <label for="<%= @cast.role %>_image_url">Image URL:</label>
+    <input id="<%= @cast.role %>_image_url" type="text" name="cast_picture" value= <%=@cast.image_url%>>
+  </div>
+  <div>
+    <label for="<%= @cast.role %>_dob">Date of Birth:</label>
+    <input id="<%= @cast.role %>_dob" type="text" name="cast_dob" value= <%=@cast.dob%>>
+  </div>
+  <div>
+    <label for="<%= @cast.role %>_bio">Bio:</label>
+    <!--<input id="director_bio" type="text" name="director_bio">-->
+    <textarea name="cast_bio" cols="10" rows="5" form="drctr"><%=@cast.bio%></textarea>
+  </div>
+  <div>
+    <button>Update <%= @cast.role.capitalize %></button>
+  </div>
+</form>
+
+
